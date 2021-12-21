@@ -3,7 +3,12 @@ var _encriptsModeljs = require('../models/encriptsModel.js'); var _encriptsModel
 
 const route= new (0, _express.Router)();
 
-
+route.get("/",(req,res)=>{
+ res.json({"msg":"deu certo"});
+});
+route.get("/test",(req,res)=>{
+ res.json({"msg":"deu certo . ok"});
+});
 route.get("/encripts/:id",_encriptsModeljs2.default.getEncripts);
 route.post("/encripts",_encriptsModeljs2.default.postEncripts);
 
